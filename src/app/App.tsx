@@ -32,7 +32,8 @@ function Routes() {
       <div
         className="space-bg"
         aria-hidden="true"
-        style={route.name === 'play' ? undefined : ({ '--station-bg': `url(${assetUrl('bg-space-atmosphere-1')})` } as React.CSSProperties)}
+        // Absolute URL: a relative url() inside a CSS variable would resolve against the stylesheet's folder.
+        style={route.name === 'play' ? undefined : ({ '--station-bg': `url(${new URL(assetUrl('bg-space-atmosphere-1') ?? '', document.baseURI).href})` } as React.CSSProperties)}
       />
       <div className="app">{page}</div>
       {settingsOpen && <SettingsDialog onClose={() => setSettingsOpen(false)} />}
