@@ -1,0 +1,26 @@
+/* Design tokens: TRONWELL KIDS GAME ZONE retro space arcade. */
+:root {
+  --navy: #10172f;
+  --dark: #182449;
+  --panel: #1b2752;
+  --panel-2: #22306a;
+  --outline: #0b1024;
+  --blue: #2878ff;
+  --cyan: #39d9ff;
+  --violet: #7957ff;
+  --purple: #b36bff;
+  --orange: #ff9f43;
+  --yellow: #ffd166;
+  --text: #f5f7ff;
+  --text-soft: #b7c1df;
+  --good: #3ddc84;
+  --bad: #ff5468;
+
+  --font-pixel: 'Press Start 2P', ui-monospace, monospace;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+
+  --px: 3px; /* pixel border width */
+  --shadow: 0 5px 0 var(--outline);
+  --gutter: 16px;
+  --tap: 48px; /* minimum touch target */
+}

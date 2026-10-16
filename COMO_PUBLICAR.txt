@@ -1,0 +1,69 @@
+TRONWELL KIDS · GAME ZONE · CÓMO PUBLICARLO
+===========================================
+
+Qué es
+------
+4 juegos arcade para practicar inglés (10–16 años), con el nivel del alumno:
+  Grammar Blaster   (nave espacial: gramática y formas verbales)
+  Word Jumper       (plataformas: vocabulario, grupos de palabras y deletreo)
+  Tense Racer       (carrera: elegir el tiempo verbal y ordenar oraciones)
+  English Detective (misterio: comprensión lectora e inferencia)
+
+Carpeta del proyecto: Downloads\tronwell_game_zone
+Sitio previsto:       https://laboratorio-cmd.github.io/tronwell-game-zone/
+El portal Tronwell Kids ya tiene un botón "Game Zone" que abre ese link (en el inicio y en cada nivel).
+
+
+PUBLICAR LA PRIMERA VEZ
+-----------------------
+1. Crear en GitHub el repositorio laboratorio-cmd/tronwell-game-zone (vacío, público).
+2. En la carpeta del proyecto:
+     git init
+     git add -A
+     git commit -m "Tronwell Kids Game Zone"
+     git branch -M main
+     git remote add origin https://github.com/laboratorio-cmd/tronwell-game-zone.git
+     git push -u origin main
+     npm install
+     npm run deploy          (construye el sitio y lo sube a la rama gh-pages)
+3. En GitHub: Settings → Pages → Branch: gh-pages / (root) → Save.
+4. Esperar 1–2 minutos y abrir https://laboratorio-cmd.github.io/tronwell-game-zone/
+
+ACTUALIZAR
+----------
+     git add -A && git commit -m "cambios" && git push
+     npm run deploy
+
+TAMBIÉN HAY QUE SUBIR EL PORTAL
+-------------------------------
+Downloads\tronwell_kids\index.html tiene ahora el botón "Game Zone". Súbelo a
+laboratorio-cmd/tronwell-kids como siempre (Add file → Upload files).
+
+
+LINKS PARA LOS ALUMNOS
+----------------------
+  Con el nivel del alumno:   https://laboratorio-cmd.github.io/tronwell-game-zone/?level=rocket
+  Niveles: tiny (A0) · moon (A1) · rocket (A1) · planet (A2) · comet (B1) · galaxy (B2)
+  También funciona ?level=A0 … ?level=B2
+
+  Si el alumno abre el Game Zone sin link:
+    - usa el resultado del test de nivel del portal (mismo navegador), o
+    - le pregunta en qué nivel de Tronwell Kids está (se puede cambiar en Settings).
+
+
+PROGRESO
+--------
+- Se guarda en el navegador de cada alumno (no hay cuentas ni servidor, igual que el portal).
+- XP, monedas, rangos, récords y 8 logros. Página "My progress" con precisión por juego y
+  "Practise again" (los temas con más errores).
+- No se guardan nombres ni datos personales.
+
+
+CONTENIDO (para revisar)
+------------------------
+- 450 ejercicios + 10 casos detectivescos (2 por nivel), en src\education\content\.
+- Todo está marcado como "draft": es contenido de muestra que debe revisar un profesor de Tronwell.
+- Ortografía británica (como el portal). Sin nombres de libros ni de sus personajes.
+- Para editar: cambiar el archivo del juego y nivel, y correr  npm run validate:content
+  (revisa respuestas inválidas, ids repetidos, explicaciones vacías, casos imposibles de resolver).
+- Ver IMPLEMENTATION_REPORT.md → "Content to review" para la lista de ítems a mirar con lupa.
